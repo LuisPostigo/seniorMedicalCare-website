@@ -34,6 +34,9 @@ const Contact = () => {
                                 <button type="submit" className="btn-primary">
                                     <Mail size={18} /> Send Email
                                 </button>
+                                <p className="contact-guardrail-note" style={{ fontSize: '0.85rem', color: '#b91c1c', marginTop: '1rem', fontStyle: 'italic' }}>
+                                    * Please do not send sensitive medical information through this form or email.
+                                </p>
                             </form>
 
                             <div className="contact-insurance-note">

@@ -78,7 +78,7 @@ const Home = () => {
                     {/* ADDED 'green-card' CLASS */}
                     <div className="quick-card no-hover green-card">
                         <div className="quick-card-icon">
-                            <img src="/green.png" alt="Green Initiative" className="green-icon" />
+                            <img src="/green.png" alt="Senior Medical Care operates as a paperless, green medical practice using solar energy" className="green-icon" />
                         </div>
                         <h3>We are Green!</h3>
                         <p>
@@ -108,7 +108,7 @@ const Home = () => {
                 <div className="container">
                     <div className="about-grid">
                         <div className="about-image">
-                            <img src="/luisPostigo/luisGPostigo_standing.png" alt="Dr. Luis G. Postigo, MD" className="rounded-image shadow-lg" />
+                            <img src="/luisPostigo/luisGPostigo_standing.png" alt="Dr. Luis G. Postigo, MD standing in his medical office, providing expert geriatric house calls in Rochester, NY" className="rounded-image shadow-lg" />
                         </div>
                         <div className="about-text">
                             <h2 className="section-title">Welcome to Senior Medical Care</h2>
