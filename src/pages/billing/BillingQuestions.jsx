@@ -52,7 +52,7 @@ const BillingQuestions = () => {
                         <div className="billing-questions-image">
                             {/* NOTE: You can replace this src with an actual image in the public folder like '/billing-image.jpg' */}
                             <img
-                                src="/newPatient/officePicture.jpg"
+                                src="/navbar/luisDriving.jpg"
                                 alt="Senior Medical Care Billing Support"
                             />
                         </div>

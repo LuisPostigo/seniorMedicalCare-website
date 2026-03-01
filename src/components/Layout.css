@@ -37,3 +37,11 @@
     font-weight: bold;
     z-index: 100;
 }
+
+/* Offset for Mobile Actions Bar */
+@media (max-width: 767px) {
+    .layout-container {
+        padding-bottom: calc(90px + env(safe-area-inset-bottom));
+        /* Accommodates floating pill + margin */
+    }
+}

@@ -42,6 +42,8 @@
 @media (min-width: 768px) {
     .billing-questions-image img {
         max-height: 20rem;
+        object-position: center 15%;
+        /* Focuses on the upper body/face for desktop screens */
     }
 }
 

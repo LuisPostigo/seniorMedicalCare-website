@@ -99,7 +99,6 @@ const Navbar = () => {
           <div className="nav-dropdown">
             <span className="nav-link">Billing</span>
             <div className="dropdown-content">
-              <Link to="/billing">Overview</Link>
               <Link to="/billing/questions">Billing Questions</Link>
               <Link to="/billing/policies">Financial Policies</Link>
             </div>
@@ -145,7 +144,11 @@ const Navbar = () => {
             <Link to="/new-patient/insurances" className="mobile-sublink">Insurances</Link>
           </div>
           <Link to="/faqs" className="mobile-link">FAQs</Link>
-          <Link to="/billing" className="mobile-link">Billing</Link>
+          <div className="mobile-section">
+            <div className="mobile-section-title">Billing</div>
+            <Link to="/billing/questions" className="mobile-sublink">Billing Questions</Link>
+            <Link to="/billing/policies" className="mobile-sublink">Financial Policies</Link>
+          </div>
           <Link to="/resources" className="mobile-link">Resources</Link>
           <Link to="/contact" className="mobile-link">Contact Us</Link>
           <div className="mobile-menu-cta">

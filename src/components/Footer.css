@@ -170,8 +170,8 @@
     .footer-grid-links {
         grid-column: 2;
         display: grid;
-        grid-template-columns: 1fr 1.2fr 1.2fr;
-        column-gap: 3rem;
+        grid-template-columns: 0.8fr 1.1fr 1.5fr;
+        column-gap: 2rem;
         align-items: start;
         min-width: 0;
     }
@@ -207,8 +207,7 @@
 
     .email-link {
         min-width: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 
@@ -308,14 +307,18 @@
 }
 
 .footer-affiliation img {
-    height: 36px;
-    filter: brightness(0) invert(1);
-    opacity: 0.35;
-    transition: opacity 0.3s;
+    height: 44px;
+    /* Slightly larger to be legible */
+    border-radius: 4px;
+    /* Smooth corners for the solid background */
+    opacity: 0.85;
+    /* Show original colors instead of washing out */
+    transition: opacity 0.3s, transform 0.2s;
 }
 
 .footer-affiliation img:hover {
-    opacity: 0.6;
+    opacity: 1;
+    transform: scale(1.02);
 }
 
 /* ============================= */

@@ -26,6 +26,31 @@
     flex-shrink: 0;
 }
 
+/* --- Featured Image ------------------------------------------------------ */
+
+.contact-image-container {
+    margin-bottom: 2.5rem;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+}
+
+.contact-image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-color: var(--bg-subtle);
+}
+
+@media (min-width: 768px) {
+    .contact-image-container img {
+        max-height: 20rem;
+        object-position: center 15%;
+    }
+}
+
 /* --- Email CTA Section --------------------------------------------------- */
 
 .contact-email-box {

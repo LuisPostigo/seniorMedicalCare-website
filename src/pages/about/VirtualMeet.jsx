@@ -49,7 +49,7 @@ const VirtualMeet = () => {
                         </div>
 
                         <img
-                            src="/luisPostigo/luisGPostigo_standing.png"
+                            src="/luisPostigo/luisGPostigo_standing.jpg"
                             alt="Dr. Luis G. Postigo standing"
                             className="rounded-image shadow-md mt-6"
                         />

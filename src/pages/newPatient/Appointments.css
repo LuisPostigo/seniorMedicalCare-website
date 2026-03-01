@@ -168,6 +168,10 @@
 }
 
 /* Application Forms Grid */
+.custom-accordion {
+    margin-bottom: 4rem;
+}
+
 .forms-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -268,7 +272,9 @@
     }
 
     .appointments-featured-image img {
-        max-height: 16rem;
+        height: 16rem;
+        max-height: none;
+        object-fit: cover;
     }
 
     .section-title {

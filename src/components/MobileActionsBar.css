@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Mobile Actions Bar (Floating Glassmorphism Pill)
+   ========================================================================== */
+
+.mobile-actions-bar {
+    position: fixed;
+    bottom: calc(1.5rem + env(safe-area-inset-bottom));
+    left: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:
+        0 10px 40px -10px rgba(0, 0, 0, 0.15),
+        0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Soft layered shadow */
+    z-index: 1000;
+    padding: 0.35rem;
+    /* Inner padding hugging the buttons */
+}
+
+.mobile-action-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.65rem 0;
+    color: var(--text-muted);
+    /* Sophisticated subtle text */
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 1.75rem;
+    /* Nested pill shape */
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-action-btn svg {
+    display: block;
+    margin-bottom: 2px;
+    transition: transform 0.2s ease;
+}
+
+/* Custom Icon Colors */
+.btn-call svg {
+    color: #16a34a;
+}
+
+/* Green */
+.btn-contact svg {
+    color: #9333ea;
+}
+
+/* Purple */
+.btn-email svg {
+    color: #ec4899;
+}
+
+/* Pink */
+
+.mobile-action-btn:active,
+.mobile-action-btn:hover {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    /* Buttons elevate on tap */
+}
+
+/* Darker hover states for icons */
+.btn-call:active svg,
+.btn-call:hover svg {
+    color: #15803d;
+    transform: translateY(-2px);
+}
+
+.btn-contact:active svg,
+.btn-contact:hover svg {
+    color: #7e22ce;
+    transform: translateY(-2px);
+}
+
+.btn-email:active svg,
+.btn-email:hover svg {
+    color: #db2777;
+    transform: translateY(-2px);
+}
+
+/* Hide on Desktop */
+@media (min-width: 768px) {
+    .mobile-actions-bar {
+        display: none;
+    }
+}

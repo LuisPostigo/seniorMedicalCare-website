@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import BackToTop from './BackToTop';
+import MobileActionsBar from './MobileActionsBar';
 import './Layout.css';
 
 const Layout = () => {
@@ -18,6 +19,7 @@ const Layout = () => {
             </main>
             <Footer />
             <BackToTop />
+            <MobileActionsBar />
         </div>
     );
 };

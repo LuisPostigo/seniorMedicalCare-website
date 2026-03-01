@@ -52,7 +52,7 @@ const Equipment = () => {
 
                     <div style={{ marginBottom: '3rem' }}>
                         <img
-                            src="/services/medicines.png"
+                            src="/services/medicines.jpg"
                             alt="Medication and Supplies"
                             style={{
                                 width: '100%',

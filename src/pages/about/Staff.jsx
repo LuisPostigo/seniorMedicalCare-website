@@ -26,7 +26,7 @@ const Staff = () => {
                             <div className="staff-card">
                                 <div className="staff-image-container">
                                     <img
-                                        src="/about/amyPostigo.png"
+                                        src="/about/amyPostigo.jpg"
                                         alt="Amy, Administrator & Office Manager"
                                         className="staff-image"
                                     />
@@ -46,7 +46,7 @@ const Staff = () => {
                             <div className="staff-card">
                                 <div className="staff-image-container">
                                     <img
-                                        src="/about/amyRatajczak.png"
+                                        src="/about/amyRatajczak.jpg"
                                         alt="Amy R., Administrative Assistant"
                                         className="staff-image"
                                     />

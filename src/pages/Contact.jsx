@@ -21,6 +21,13 @@ const Contact = () => {
                     Dial 911 in Case of Medical Emergency
                 </div>
 
+                <div className="contact-image-container">
+                    <img
+                        src="/navbar/LuisOnThePhone.jpg"
+                        alt="Senior Medical Care Contact Support"
+                    />
+                </div>
+
                 <div className="about-grid">
                     <div className="text-content">
 
