@@ -70,7 +70,7 @@ const Appointments = () => {
 
                         <div className="appointments-featured-image">
                             <img
-                                src="/newPatient/office_picture.png"
+                                src="/newPatient/office_picture.jpg"
                                 alt="Senior Medical Care Office"
                             />
                         </div>

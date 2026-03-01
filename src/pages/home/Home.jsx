@@ -4,13 +4,13 @@ import { UserPlus, Stethoscope, ShieldCheck, ArrowRight } from 'lucide-react';
 import './Home.css';
 
 const heroImages = [
-    '/navbar/LuisEnteringHome.png',
-    '/navbar/LuisOnThePhone.png',
-    '/navbar/Luis_snow.png',
-    '/navbar/Luis_walking_snow.png',
-    '/navbar/luisDriving.png',
-    '/navbar/luis_closeup.png',
-    '/navbar/stetoscope_closeup.png'
+    '/navbar/LuisEnteringHome.jpg',
+    '/navbar/LuisOnThePhone.jpg',
+    '/navbar/Luis_snow.jpg',
+    '/navbar/Luis_walking_snow.jpg',
+    '/navbar/luisDriving.jpg',
+    '/navbar/luis_closeup.jpg',
+    '/navbar/stetoscope_closeup.jpg'
 ];
 
 const Home = () => {
@@ -108,7 +108,7 @@ const Home = () => {
                 <div className="container">
                     <div className="about-grid">
                         <div className="about-image">
-                            <img src="/luisPostigo/luisGPostigo_standing.png" alt="Dr. Luis G. Postigo, MD standing in his medical office, providing expert geriatric house calls in Rochester, NY" className="rounded-image shadow-lg" />
+                            <img src="/luisPostigo/luisGPostigo_standing.jpg" alt="Dr. Luis G. Postigo, MD standing in his medical office, providing expert geriatric house calls in Rochester, NY" className="rounded-image shadow-lg" />
                         </div>
                         <div className="about-text">
                             <h2 className="section-title">Welcome to Senior Medical Care</h2>

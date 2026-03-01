@@ -405,6 +405,11 @@
         min-height: auto;
     }
 
+    .hero-bg-slide {
+        background-position: center 15%;
+        /* Keeps focus on faces/upper body on vertical screens */
+    }
+
     .hero-content {
         padding: 2.5rem 1rem;
     }
