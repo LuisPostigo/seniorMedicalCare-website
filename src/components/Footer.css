@@ -1,0 +1,432 @@
+/* ============================= */
+/* Footer.css — Premium Dark     */
+/* ============================= */
+
+.footer {
+    background-color: #0f1d3d;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0;
+}
+
+/* ============================= */
+/* Brand Section                 */
+/* ============================= */
+
+.footer-brand {
+    margin-bottom: 2.5rem;
+    min-width: 0;
+}
+
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    margin-bottom: 1.25rem;
+}
+
+.footer-logo-img {
+    height: 50px;
+    width: auto;
+    opacity: 1;
+}
+
+.footer-logo-title {
+    font-size: 1.25rem;
+    color: white;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.footer-logo-subtitle {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    font-weight: 600;
+}
+
+.brand-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* Phone link */
+.footer-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    transition: opacity 0.2s;
+}
+
+.footer-phone:hover {
+    opacity: 0.8;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-phone svg {
+    opacity: 0.7;
+}
+
+/* Social */
+.footer-social {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.social-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.social-icon-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+/* ============================= */
+/* Mobile Collapsible Logic      */
+/* ============================= */
+
+.footer-collapsible h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+    color: white;
+}
+
+.footer-collapsible ul,
+.footer-collapsible .footer-contact-info {
+    display: none;
+    padding: 1rem 0;
+}
+
+.footer-collapsible.is-open ul,
+.footer-collapsible.is-open .footer-contact-info {
+    display: block;
+}
+
+.mobile-chevron {
+    transition: transform 0.3s ease;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-collapsible.is-open .mobile-chevron {
+    transform: rotate(180deg);
+}
+
+/* ============================= */
+/* Desktop Layout                */
+/* ============================= */
+
+@media (min-width: 1024px) {
+    .footer {
+        padding-top: 0;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: 1.2fr 2.8fr;
+        column-gap: 4rem;
+        padding: 4rem 0 3rem;
+        align-items: start;
+    }
+
+    .footer-main>* {
+        min-width: 0;
+    }
+
+    .footer-brand {
+        grid-column: 1;
+        margin: 0;
+    }
+
+    .footer-grid-links {
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr 1.2fr;
+        column-gap: 3rem;
+        align-items: start;
+        min-width: 0;
+    }
+
+    .footer-collapsible {
+        min-width: 0;
+    }
+
+    .footer-collapsible h3 {
+        cursor: default;
+        border-bottom: none;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+        pointer-events: none;
+        font-size: 0.8rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .footer-collapsible h3 .mobile-chevron {
+        display: none;
+    }
+
+    .footer-collapsible ul,
+    .footer-collapsible .footer-contact-info {
+        display: block !important;
+        padding: 0;
+    }
+
+    .footer-contact-info {
+        min-width: 0;
+    }
+
+    .email-link {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* ============================= */
+/* Lists                         */
+/* ============================= */
+
+.footer-links-list,
+.footer-hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-list li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-links-list a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    transition: color 0.2s, padding-left 0.2s;
+    display: inline-block;
+}
+
+.footer-links-list a:hover {
+    color: white;
+    padding-left: 4px;
+    text-decoration: none;
+}
+
+.footer-hours-list li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.65);
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-hours-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.hours-closed {
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+}
+
+/* ============================= */
+/* Contact                       */
+/* ============================= */
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.contact-icon {
+    color: rgba(255, 255, 255, 0.4);
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.footer-contact-info address {
+    font-style: normal;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0;
+}
+
+.email-link {
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.email-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Affiliation */
+.footer-affiliation {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-affiliation img {
+    height: 36px;
+    filter: brightness(0) invert(1);
+    opacity: 0.35;
+    transition: opacity 0.3s;
+}
+
+.footer-affiliation img:hover {
+    opacity: 0.6;
+}
+
+/* ============================= */
+/* Bottom Bar                    */
+/* ============================= */
+
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.25rem 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-bottom-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom-flex {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-legal a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-legal a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+}
+
+/* ============================= */
+/* Mobile Polish                 */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .footer-main {
+        padding: 2.5rem 0 1rem;
+    }
+
+    .footer-collapsible h3 {
+        min-height: 48px;
+        font-size: 0.85rem;
+    }
+
+    .footer-phone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        min-height: 48px;
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: var(--radius-md, 0.5rem);
+    }
+
+    .footer-phone:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .brand-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+
+    .social-icon-link {
+        min-height: 48px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .email-link {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        font-size: 0.95rem;
+    }
+
+    .footer-links-list a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        font-size: 1rem;
+    }
+
+    .footer-legal {
+        gap: 2rem;
+    }
+
+    .footer-legal a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}

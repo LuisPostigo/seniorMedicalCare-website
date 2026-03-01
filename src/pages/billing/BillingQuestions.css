@@ -1,0 +1,161 @@
+/* Billing Questions Page — Page-Specific Styles Only
+   (Shared sidebar styles are now in src/styles/shared.css) */
+
+.billing-questions-page {
+    background-color: var(--bg-main);
+    min-height: 100vh;
+}
+
+.billing-questions-main {
+    padding: 3rem 0;
+}
+
+.billing-questions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .billing-questions-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Image Section */
+.billing-questions-image {
+    margin-bottom: 2.5rem;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+}
+
+.billing-questions-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-color: var(--bg-subtle);
+}
+
+@media (min-width: 768px) {
+    .billing-questions-image img {
+        max-height: 20rem;
+    }
+}
+
+/* Scammer Alert Styling */
+.scammer-alert-box {
+    background-color: #FEF2F2;
+    border: 1px solid #FECACA;
+    border-left: 4px solid #DC2626;
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.scammer-alert-header {
+    color: #B91C1C;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-sans);
+}
+
+.scammer-alert-content p {
+    color: var(--text-main);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.scammer-alert-content p:last-child {
+    margin-bottom: 0;
+}
+
+.scammer-alert-content strong {
+    color: #991B1B;
+}
+
+/* FAQs Section */
+.faq-section-title {
+    font-size: 1.75rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-serif);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+}
+
+.billing-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.billing-faq-item {
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.billing-faq-item.active {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.billing-faq-header {
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-sans);
+    transition: background-color 0.2s;
+}
+
+.billing-faq-header:hover {
+    background-color: var(--bg-subtle);
+}
+
+.billing-faq-header span {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.4;
+    padding-right: 1rem;
+}
+
+.billing-faq-content {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.billing-faq-content p {
+    margin: 0;
+    color: var(--text-main);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Sidebar container */
+.billing-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}

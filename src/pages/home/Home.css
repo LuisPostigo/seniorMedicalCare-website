@@ -1,0 +1,520 @@
+/* --- Global Variables & Base --- */
+:root {
+    --primary: #1e40af;
+    --primary-light: #93c5fd;
+    --primary-dark: #1e3a8a;
+    --secondary: #93c5fd;
+    --sage-bg: #f0f7f4;
+    --sage-border: #d1e2d9;
+    --sage-text: #2d5a43;
+    --sand-bg: #f9f6f1;
+    --sand-border: #eee5d8;
+    --text-main: #2c2c2c;
+    --text-muted: #4b5563;
+    --border-elegant: #e5e7eb;
+}
+
+.home-page {
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+/* --- Reusable Button Styles --- */
+.btn-primary {
+    background-color: var(--primary-light);
+    color: #000000 !important;
+    /* FIXED: Black font for buttons */
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #7eb6f8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    color: #000000 !important;
+}
+
+.btn-secondary {
+    background-color: var(--primary);
+    color: #ffffff !important;
+    /* News article buttons stay white on dark blue */
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+}
+
+/* --- Hero Section (Left-Aligned Layout) --- */
+.hero-section {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.hero-bg-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-bg-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center 30%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-bg-slide.active {
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.6) 45%, rgba(15, 23, 42, 0) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    max-width: 620px;
+    text-align: left;
+    color: white;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    color: #ffffff !important;
+    /* FIXED: Title remains White */
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-question {
+    font-weight: 700;
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    color: var(--secondary);
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.service-area-container {
+    margin-top: 1rem;
+    margin-bottom: 8rem;
+}
+
+.service-area-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.map-link {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* --- Quick Links Section (Elegant Cards) --- */
+.quick-links-section {
+    position: relative;
+    z-index: 10;
+    margin-top: -6rem;
+    padding: 0 1.5rem;
+}
+
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quick-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid var(--border-elegant);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+.quick-card:not(.no-hover):hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.quick-card.green-card {
+    background-color: var(--sage-bg);
+    border: 1px solid var(--sage-border);
+}
+
+.quick-card.green-card h3 {
+    color: var(--sage-text);
+}
+
+.green-icon {
+    width: 45px;
+    margin-bottom: 1rem;
+}
+
+.quick-card-icon {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.quick-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.quick-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.quick-card-link {
+    color: var(--primary);
+    font-weight: 700;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* --- About Preview --- */
+.about-preview-section {
+    padding: 8rem 0;
+}
+
+.about-grid {
+    display: grid;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 968px) {
+    .about-grid {
+        grid-template-columns: 1fr 1.2fr;
+    }
+}
+
+.rounded-image {
+    border-radius: 1.5rem;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 4/5;
+}
+
+.highlight-text {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+/* --- News Section --- */
+.news-section {
+    background-color: #ffffff;
+    padding: 6rem 0;
+    border-top: 1px solid var(--border-elegant);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.news-card-video,
+.news-card-article {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-elegant);
+}
+
+.news-card-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem !important;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.news-quote {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin: 1.5rem 0 2rem;
+    line-height: 1.4;
+}
+
+/* --- Sophisticated Sand Trust Section --- */
+.trust-section-sand {
+    background-color: var(--sand-bg);
+    padding: 8rem 1.5rem;
+    border-top: 1px solid var(--sand-border);
+}
+
+.text-dark {
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.trust-quote {
+    font-size: 1.4rem;
+    color: #5a554e;
+    font-style: italic;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.btn-outline-dark {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border: 2px solid var(--text-main);
+    color: var(--text-main);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--text-main);
+    color: var(--sand-bg);
+}
+
+.ml-2-inline {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+
+/* ==========================================================================
+   HOME PAGE — Mobile Responsive (≤ 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    /* Hero: tighter, not full-screen */
+    .hero-section {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 2.5rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-question {
+        font-size: 1.15rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-trust-badge {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+        gap: 1rem;
+    }
+
+    .hero-actions .btn-primary,
+    .hero-actions .btn-lg {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .service-area-container {
+        margin-bottom: 4rem;
+    }
+
+    /* Quick Links: prevent overflow on narrow screens */
+    .quick-links-section {
+        margin-top: -3rem;
+        padding: 0 1rem;
+    }
+
+    .quick-links-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .quick-card {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .quick-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .quick-card-icon {
+        margin-bottom: 1rem;
+    }
+
+    /* About Preview */
+    .about-preview-section {
+        padding: 3rem 0;
+    }
+
+    .about-grid {
+        gap: 2rem;
+    }
+
+    .highlight-text {
+        font-size: 1.1rem;
+    }
+
+    /* News Section */
+    .news-section {
+        padding: 3rem 0;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .news-card-article {
+        padding: 2rem !important;
+    }
+
+    .news-quote {
+        font-size: 1.1rem;
+    }
+
+    /* Trust Section */
+    .trust-section-sand {
+        padding: 3rem 1rem;
+    }
+
+    .text-dark {
+        font-size: 1.75rem;
+    }
+
+    .trust-quote {
+        font-size: 1.15rem;
+        line-height: 1.6;
+    }
+
+    .btn-outline-dark {
+        width: 100%;
+        text-align: center;
+        padding: 0.875rem 1.5rem;
+    }
+}

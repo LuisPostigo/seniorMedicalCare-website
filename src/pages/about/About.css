@@ -1,0 +1,191 @@
+/* About Pages — Page-Specific Styles Only
+   (Shared styles like .page-wrapper, .page-header, .sidebar-card, .value-list
+    are now in src/styles/shared.css) */
+
+/* Grids for content + sidebar */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 968px) {
+    .about-grid {
+        grid-template-columns: 7fr 4fr;
+    }
+}
+
+.text-content h2,
+.text-content h3 {
+    margin-top: 2rem;
+}
+
+.text-content h2:first-child {
+    margin-top: 0;
+}
+
+/* Education & Training */
+.education-training-container {
+    margin-top: 3rem;
+}
+
+.section-label {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.credential-card {
+    background: #ffffff;
+    border: 1px solid #eef1f5;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.card-icon {
+    color: var(--secondary);
+}
+
+.info-group {
+    margin-bottom: 1.25rem;
+}
+
+.info-group:last-child {
+    margin-bottom: 0;
+}
+
+.label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: #94a3b8;
+    margin-bottom: 0.25rem;
+}
+
+.info {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Staff Cards */
+.staff-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.staff-card {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid #eef1f5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    align-items: flex-start;
+}
+
+.staff-image-container {
+    flex: 0 0 35%;
+}
+
+.staff-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+}
+
+.staff-info {
+    flex: 1;
+}
+
+.staff-name {
+    font-size: 1.75rem;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.staff-role {
+    color: var(--secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.staff-bio p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 1rem;
+}
+
+.staff-bio p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .staff-card {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .staff-image-container {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .staff-name {
+        font-size: 1.4rem;
+    }
+
+    .credentials-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .credential-card {
+        padding: 1.5rem;
+    }
+
+    .section-label {
+        font-size: 1.2rem;
+    }
+
+    .text-content h2,
+    .text-content h3 {
+        margin-top: 1.5rem;
+    }
+}

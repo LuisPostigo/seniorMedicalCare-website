@@ -1,0 +1,88 @@
+/* ServicesProvided — Page-Specific Styles Only
+   (Accordion styles are now in src/styles/shared.css) */
+
+.services-accordion-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.intro-text {
+    line-height: 1.8;
+    color: var(--text-dark, #333);
+    margin-bottom: 2.5rem;
+}
+
+.services-section-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--primary);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color, #eee);
+}
+
+.services-grouped-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .services-grouped-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.service-group-card {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border-top: 5px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-group-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color, #eee);
+}
+
+.service-group-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.service-group-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-dark, #333);
+    line-height: 1.5;
+    font-size: 1.05rem;
+}
+
+.service-group-list li:last-child {
+    margin-bottom: 0;
+}
+
+.group-bullet-icon {
+    color: var(--secondary);
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
