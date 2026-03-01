@@ -14,6 +14,13 @@ const AboutUs = () => {
             </div>
 
             <div className="container content-section">
+                <div className="about-image-container">
+                    <img
+                        src="/about/holdinghands.jpg"
+                        alt="Doctor holding patient's hands"
+                    />
+                </div>
+
                 <div className="about-grid">
                     <div className="text-content">
                         <h2>Our Mission</h2>
@@ -26,12 +33,6 @@ const AboutUs = () => {
                         <p className="mb-8 text-lg" style={{ color: 'var(--text-main)', lineHeight: 1.7 }}>
                             Our dedicated office staff handles your questions, appointments and insurance billing. <Link to="/services" style={{ textDecoration: 'underline' }}>Click here</Link> or 'services' on the navigation bar above to see what services we are able to provide at your home for no extra cost.
                         </p>
-
-                        <img
-                            src="/about/holdinghands.jpg"
-                            alt="Doctor holding patient's hands"
-                            style={{ width: '100%', borderRadius: 'var(--radius-lg)', marginBottom: '2rem', objectFit: 'cover', maxHeight: '400px', boxShadow: 'var(--shadow-md)' }}
-                        />
 
                         <h3>Why Choose Us?</h3>
                         <ul className="value-list">
@@ -71,7 +72,7 @@ const AboutUs = () => {
                         </div>
 
                         <img
-                            src="/luisPostigo/luisGPostigo_standing.png"
+                            src="/luisPostigo/luisGPostigo_standing.jpg"
                             alt="Dr. Luis G. Postigo standing"
                             className="rounded-image shadow-md"
                         />

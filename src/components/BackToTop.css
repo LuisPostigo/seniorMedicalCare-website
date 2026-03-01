@@ -44,7 +44,8 @@
 
 @media (max-width: 768px) {
     .back-to-top {
-        bottom: 1.5rem;
-        right: 1rem;
+        bottom: calc(7.5rem + env(safe-area-inset-bottom));
+        /* Full clearance over mobile actions pill */
+        right: 1.5rem;
     }
 }

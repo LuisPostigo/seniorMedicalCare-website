@@ -2,6 +2,31 @@
    (Shared styles like .page-wrapper, .page-header, .sidebar-card, .value-list
     are now in src/styles/shared.css) */
 
+/* Featured Full-Width Image */
+.about-image-container {
+    margin-bottom: 2.5rem;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+}
+
+.about-image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-color: var(--bg-subtle);
+}
+
+@media (min-width: 768px) {
+    .about-image-container img {
+        max-height: 24rem;
+        /* Matches the hero aesthetic */
+        object-position: center 25%;
+    }
+}
+
 /* Grids for content + sidebar */
 .about-grid {
     display: grid;
